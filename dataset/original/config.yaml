@@ -1,0 +1,9 @@
+datapath: '/kaggle/input/idao-2022/dichalcogenides_train'
+test_datapath: '/kaggle/input/idao-2022/dichalcogenides_test'
+checkpoint_path: '/kaggle/output/callback/val_mae_00616_0.016877.hdf5'
+
+model:
+  epochs: 800
+  batch_size: 64
+  lr: 5e-4
+  cutoff: 3
