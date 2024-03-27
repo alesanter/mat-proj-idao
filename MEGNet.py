@@ -7,6 +7,7 @@ import zipfile
 import json
 import yaml
 
+from pathlib import PureWindowsPath
 from typing_extensions import override
 
 import matplotlib.pyplot as plt
@@ -174,7 +175,7 @@ def prepare_dataset(dataset_path):
 
 
 
-with open(".\dataset\config.yaml") as file:
+with open(PureWindowsPath(".\dataset\config.yaml")) as file:
     config = yaml.safe_load(file)
 indexes, structures, targets = prepare_dataset(config["datapath"])
 
