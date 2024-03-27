@@ -1,4 +1,12 @@
 **/venv
+**/logs
+
+**/.idea
+
+dgl_graph.bin
+labels.json
+lattice.pt
+state_attr.pt
 
 .ipynb_checkpoints/
 .virtual_documents/
