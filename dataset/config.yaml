@@ -1,0 +1,9 @@
+datapath: './dataset/dichalcogenides_train'
+test_datapath: './dataset/dichalcogenides_test'
+checkpoint_path: './dataset/val_mae_00616_0.016877.hdf5'
+
+model:
+  epochs: 800
+  batch_size: 64
+  lr: 3e-4
+  cutoff: 3
