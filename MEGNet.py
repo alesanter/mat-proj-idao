@@ -158,13 +158,12 @@ def read_pymatgen_dict(file, encoding="utf-8"):
 def energy_within_threshold(prediction, target):
     # compute absolute error on energy per system.
     # then count the no. of systems where max energy error is < 0.02.
-
     e_thresh = 0.02
-    error_energy = tf.math.abs(target - prediction)
+    error_energy = torch.abs(target - prediction)
 
-    success = tf.math.count_nonzero(error_energy < e_thresh)
-    total = tf.size(target)
-    return success / tf.cast(total, tf.int64)
+    success = torch.count_nonzero(error_energy < e_thresh)
+    total = torch.size(target)
+    return success / total
 
 
 def prepare_dataset(dataset_path):
